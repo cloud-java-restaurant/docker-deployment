@@ -73,7 +73,7 @@ services:
       - DB_PASSWORD=${POSTGRES_DB_PASSWORD}
       - DB_URL=${MENU_DB_URL}
 
-  menu-aggregate-servie:
+  menu-aggregate-service:
     image: "menu-aggregate-service"
     container_name: "menu-aggregate-service"
     ports:
