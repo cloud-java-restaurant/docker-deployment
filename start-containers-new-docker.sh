@@ -2,11 +2,11 @@
 
 echo -e "\n*** Starting Docker Containers ***\n"
 
-docker volume rm docker_db-data
+docker volume rm docker-deployment_db-data
 
-docker volume rm docker_connect-data
+docker volume rm docker-deployment_connect-data
 
-docker volume rm docker_kafka-data
+docker volume rm docker-deployment_kafka-data
 
 docker compose up -d
 
