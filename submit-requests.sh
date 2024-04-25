@@ -38,9 +38,9 @@ curl -X POST http://localhost:9093/v1/reviews -H 'Content-Type: application/json
 printf "\n\n"
 curl http://localhost:9093/v1/reviews/1
 printf "\n\n"
-curl http://localhost:9093/v1/reviews/menu-item/1?from-0&size=10&sortBy=date_asc
+curl -H 'X-User-Name: Alex' "http://localhost:9093/v1/reviews/menu-item/1?from=0&size=10&sortBy=date_asc"
 printf "\n\n"
-curl http://localhost:9093/v1/reviews/my?from=0&size=10&sortBy=date_asc
+curl -H 'X-User-Name: Alex' "http://localhost:9093/v1/reviews/my?from=0&size=10&sortBy=date_asc"
 printf "\n\n"
 curl -X POST http://localhost:9093/v1/reviews/ratings -H 'Content-Type: application/json' -d '{"menuIds": [1,2,3,4,5]}'
 printf "\n\n"
@@ -48,6 +48,6 @@ echo -e "\n*** Submitting requests to Menu Aggregate Service ***\n"
 printf "\n\n"
 curl http://localhost:9094/v1/menu-aggregate/1
 printf "\n\n"
-curl http://localhost:9094/v1/menu-aggregate?category=DRINKS
+curl "http://localhost:9094/v1/menu-aggregate?category=DRINKS"
 printf "\n\n"
 
