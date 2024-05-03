@@ -104,6 +104,26 @@ services:
       - DB_URL=${MENU_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
 
+#  menu-service-2:
+#    image: "menu-service"
+#    container_name: "menu-service-2"
+#    depends_on:
+#      postgres:
+#        condition: service_healthy
+#      config-server:
+#        condition: service_healthy
+#    ports:
+#      - "9090:9090"
+#    environment:
+#      - SERVER_PORT=9090
+#      - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
+#      - SPRING_CLOUD_CONFIG_FAIL_FAST=true
+#      - SPRING_PROFILES_ACTIVE=prod
+#      - DB_USER=${POSTGRES_DB_USER}
+#      - DB_PASSWORD=${POSTGRES_DB_PASSWORD}
+#      - DB_URL=${MENU_DB_URL}
+#      - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+
   menu-aggregate-service:
     image: "menu-aggregate-service"
     container_name: "menu-aggregate-service"
