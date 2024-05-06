@@ -29,6 +29,21 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - EUREKA_HOSTNAME=discovery-service
 
+  gateway-service:
+    image: "gateway-service"
+    container_name: "gateway-service"
+    ports:
+      - "9099:9099"
+    depends_on:
+      config-server:
+        condition: service_healthy
+    environment:
+      - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
+      - SPRING_CLOUD_CONFIG_FAIL_FAST=true
+      - SPRING_PROFILES_ACTIVE=prod
+      - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+      - REDIS_HOST=${REDIS_HOST}
+
   dispatcher-service:
     image: "dispatcher-service"
     container_name: "dispatcher-service"
@@ -239,6 +254,12 @@ services:
         confluent-hub install --no-prompt debezium/debezium-connector-postgresql:2.5.3
         echo "Launching Kafka Connect worker"
         /etc/confluent/docker/run
+
+  redis:
+    image: "redis:7.2.4"
+    container_name: "redis"
+    ports:
+      - "6379:6379"
 
 volumes:
   db-data:
