@@ -43,6 +43,7 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - REDIS_HOST=${REDIS_HOST}
+      - ZIPKIN_URL=${ZIPKIN_URL}
 
   dispatcher-service:
     image: "dispatcher-service"
@@ -77,6 +78,7 @@ services:
       - DB_PASSWORD=${POSTGRES_DB_PASSWORD}
       - DB_URL=${REVIEW_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+      - ZIPKIN_URL=${ZIPKIN_URL}
 
   orders-service:
     image: "orders-service"
@@ -99,6 +101,7 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=${KAFKA_BOOTSTRAP_SERVERS}
       - SCHEMA_REGISTRY_URL=${SCHEMA_REGISTRY_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+      - ZIPKIN_URL=${ZIPKIN_URL}
 
   menu-service:
     image: "menu-service"
@@ -118,6 +121,7 @@ services:
       - DB_PASSWORD=${POSTGRES_DB_PASSWORD}
       - DB_URL=${MENU_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+      - ZIPKIN_URL=${ZIPKIN_URL}
 
 #  menu-service-2:
 #    image: "menu-service"
@@ -138,6 +142,8 @@ services:
 #      - DB_PASSWORD=${POSTGRES_DB_PASSWORD}
 #      - DB_URL=${MENU_DB_URL}
 #      - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+#      - ZIPKIN_URL=${ZIPKIN_URL}
+
 
   menu-aggregate-service:
     image: "menu-aggregate-service"
@@ -152,6 +158,7 @@ services:
       - SPRING_CLOUD_CONFIG_FAIL_FAST=true
       - SPRING_PROFILES_ACTIVE=prod
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
+      - ZIPKIN_URL=${ZIPKIN_URL}
 
   postgres:
     image: "postgres:16.1"
@@ -260,6 +267,13 @@ services:
     container_name: "redis"
     ports:
       - "6379:6379"
+
+  zipkin:
+    image: "openzipkin/zipkin:3"
+    container_name: "zipkin"
+    ports:
+      - "9411:9411"
+
 
 volumes:
   db-data:
