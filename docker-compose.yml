@@ -279,8 +279,8 @@ services:
     container_name: "keycloak"
     command: start-dev # start keycloak in development mode
     environment:
-      - KEYCLOAK_ADMIN=user
-      - KEYCLOAK_ADMIN_PASSWORD=password
+      - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
     ports:
       - "8080:8080"
 
