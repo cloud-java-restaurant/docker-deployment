@@ -274,6 +274,16 @@ services:
     ports:
       - "9411:9411"
 
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0
+    container_name: "keycloak"
+    command: start-dev # start keycloak in development mode
+    environment:
+      - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+    ports:
+      - "8080:8080"
+
 
 volumes:
   db-data:
