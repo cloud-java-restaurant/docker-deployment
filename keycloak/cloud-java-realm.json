@@ -62,8 +62,22 @@
       "containerId" : "98cbff47-aaa2-4e96-9f89-f0a67dddee10",
       "attributes" : { }
     }, {
-      "id" : "07213cec-55d5-47f1-8ce7-fcb5b41087f5",
-      "name" : "cloud-java-admin",
+      "id" : "a9d8269b-2018-443c-b4fe-865bc66d6186",
+      "name" : "default-roles-cloud-java",
+      "description" : "${role_default-roles}",
+      "composite" : true,
+      "composites" : {
+        "realm" : [ "offline_access", "uma_authorization" ],
+        "client" : {
+          "account" : [ "manage-account", "view-profile" ]
+        }
+      },
+      "clientRole" : false,
+      "containerId" : "98cbff47-aaa2-4e96-9f89-f0a67dddee10",
+      "attributes" : { }
+    }, {
+      "id" : "b6819606-fbcc-48a3-a25b-23421cb4434a",
+      "name" : "ADMIN",
       "description" : "",
       "composite" : true,
       "composites" : {
@@ -75,27 +89,13 @@
       "containerId" : "98cbff47-aaa2-4e96-9f89-f0a67dddee10",
       "attributes" : { }
     }, {
-      "id" : "665cd033-c496-44ce-bae6-57bc6a5dea06",
-      "name" : "cloud-java-user",
+      "id" : "0a3f54a9-b6b9-433b-9908-291883ab7872",
+      "name" : "USER",
       "description" : "",
       "composite" : true,
       "composites" : {
         "client" : {
           "cloud-java-gateway" : [ "USER" ]
-        }
-      },
-      "clientRole" : false,
-      "containerId" : "98cbff47-aaa2-4e96-9f89-f0a67dddee10",
-      "attributes" : { }
-    }, {
-      "id" : "a9d8269b-2018-443c-b4fe-865bc66d6186",
-      "name" : "default-roles-cloud-java",
-      "description" : "${role_default-roles}",
-      "composite" : true,
-      "composites" : {
-        "realm" : [ "offline_access", "uma_authorization" ],
-        "client" : {
-          "account" : [ "manage-account", "view-profile" ]
         }
       },
       "clientRole" : false,
@@ -445,7 +445,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "offline_access", "uma_authorization", "cloud-java-admin", "default-roles-cloud-java" ],
+    "realmRoles" : [ "offline_access", "uma_authorization", "default-roles-cloud-java", "ADMIN" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -468,7 +468,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "offline_access", "uma_authorization", "default-roles-cloud-java", "cloud-java-user" ],
+    "realmRoles" : [ "offline_access", "uma_authorization", "default-roles-cloud-java", "USER" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -1235,7 +1235,10 @@
       "config" : {
         "introspection.token.claim" : "true",
         "multivalued" : "true",
+        "userinfo.token.claim" : "false",
         "user.attribute" : "foo",
+        "id.token.claim" : "true",
+        "lightweight.claim" : "false",
         "access.token.claim" : "true",
         "claim.name" : "resource_access.${client_id}.roles",
         "jsonType.label" : "String"
@@ -1249,9 +1252,12 @@
       "config" : {
         "introspection.token.claim" : "true",
         "multivalued" : "true",
+        "userinfo.token.claim" : "false",
         "user.attribute" : "foo",
+        "id.token.claim" : "true",
+        "lightweight.claim" : "false",
         "access.token.claim" : "true",
-        "claim.name" : "realm_access.roles",
+        "claim.name" : "roles",
         "jsonType.label" : "String"
       }
     }, {
@@ -1338,7 +1344,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-property-mapper", "saml-role-list-mapper", "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-full-name-mapper", "oidc-usermodel-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-address-mapper" ]
+        "allowed-protocol-mapper-types" : [ "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-address-mapper", "oidc-full-name-mapper", "oidc-usermodel-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-property-mapper", "saml-role-list-mapper" ]
       }
     }, {
       "id" : "50e79f9a-39bd-450f-964b-d21affcfe8bb",
@@ -1356,7 +1362,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-attribute-mapper", "saml-user-property-mapper", "oidc-usermodel-property-mapper", "oidc-usermodel-attribute-mapper", "oidc-full-name-mapper", "saml-role-list-mapper", "oidc-address-mapper", "oidc-sha256-pairwise-sub-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-usermodel-attribute-mapper", "oidc-full-name-mapper", "saml-role-list-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "saml-user-attribute-mapper", "oidc-address-mapper", "saml-user-property-mapper" ]
       }
     }, {
       "id" : "73029a81-9c47-432b-bbe2-9e25eaad9bdf",
