@@ -81,6 +81,8 @@ services:
       - DB_URL=${REVIEW_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
+      - KEYCLOAK_URL=${KEYCLOAK_URL}
+      - JWK_SET_URL=${JWK_SET_URL}
 
   orders-service:
     image: "orders-service"
