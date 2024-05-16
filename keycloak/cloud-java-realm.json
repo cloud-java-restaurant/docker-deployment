@@ -449,6 +449,75 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "6b72ac0a-be05-400d-b9da-737186feef97",
+    "username" : "jane",
+    "firstName" : "Jane",
+    "lastName" : "Jane",
+    "email" : "jane@email.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1715888946151,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "43daa112-b0e0-4315-b526-3c257da6059c",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1715888957065,
+      "secretData" : "{\"value\":\"6yCpcSs8D5xRXOchZ8XClPApDyr9cYMn1xytDb+cv1in/YiSg91PjfxCw8DHNVK6xQp8ZSew1jTjxqDaQZBJXw==\",\"salt\":\"s0AcuA2U+HEnxKwpXl2Zkg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-cloud-java", "USER" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "8458f8f7-b63b-4937-bc90-d12d6afa4254",
+    "username" : "john",
+    "firstName" : "John",
+    "lastName" : "John",
+    "email" : "john@email.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1715888791581,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "1bf71241-bb79-46f0-bdb7-6d74fc1ecff3",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1715888804380,
+      "secretData" : "{\"value\":\"EZgbFDqEWW3JZOLcIdlcJgvHR5lbbS0TkBv5VKwa6wDvLIoAOl/fB7ryTYnAE7CAzZcP4fqU+M/uO5JuZcLkQw==\",\"salt\":\"Ca9TBNcFMFhMBXoNBE9clg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-cloud-java", "USER" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "db730684-35c1-44c6-bae7-e8262f8821c2",
+    "username" : "kate",
+    "firstName" : "Kate",
+    "lastName" : "Kate",
+    "email" : "kate@email.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1715888900971,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "5296f658-4ad5-4cf9-8849-01d4549e3284",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1715888911966,
+      "secretData" : "{\"value\":\"aTDrA8qUM1Uw0ZjF5S2Ryw4D6jFc0gSCsex/VaPYhPQmwmtJ5h2s14J4aOLH9Nz+Bx8+oE4IRYVjAak6zFdbmA==\",\"salt\":\"u1xnllfC3j6K+9Ac/xp18A==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-cloud-java", "USER" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "4f851128-0d28-4023-8096-de65f8e68b8f",
     "username" : "max",
     "firstName" : "Max",
@@ -469,6 +538,29 @@
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "uma_authorization", "default-roles-cloud-java", "USER" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "fe4211f1-2c4c-41b8-bbe8-935541b0a85d",
+    "username" : "michael",
+    "firstName" : "Michael",
+    "lastName" : "Michael",
+    "email" : "michael@email.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1715888835054,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "ed09093b-9cf5-48cf-8c8f-9fdca21ab588",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1715888846265,
+      "secretData" : "{\"value\":\"s+r+F5zj66bo9/UBihIh06/qtML+hG6upH4tUYKlEdtr7KXoHzawbf5+XR95E4wciHDxmczwz6g8j5Vo5gWjHg==\",\"salt\":\"RmwiLZ6eBkbEaAW5rYpwBQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-cloud-java", "USER" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -1344,7 +1436,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-address-mapper", "oidc-full-name-mapper", "oidc-usermodel-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-property-mapper", "saml-role-list-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-usermodel-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-full-name-mapper", "oidc-address-mapper", "saml-user-attribute-mapper", "saml-role-list-mapper", "oidc-usermodel-property-mapper", "saml-user-property-mapper" ]
       }
     }, {
       "id" : "50e79f9a-39bd-450f-964b-d21affcfe8bb",
@@ -1362,7 +1454,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-usermodel-attribute-mapper", "oidc-full-name-mapper", "saml-role-list-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "saml-user-attribute-mapper", "oidc-address-mapper", "saml-user-property-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-usermodel-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-attribute-mapper", "oidc-full-name-mapper", "saml-role-list-mapper", "saml-user-property-mapper", "oidc-usermodel-property-mapper", "oidc-address-mapper" ]
       }
     }, {
       "id" : "73029a81-9c47-432b-bbe2-9e25eaad9bdf",
