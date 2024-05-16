@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b18d178e-025d-40b7-afda-a1f187417480",
+		"_postman_id": "268f97ba-4f0e-4378-9aa5-f8d11c3556ea",
 		"name": "cloud-java security",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14134951"
@@ -160,12 +160,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9091/v1/menu-items?category=DRINKS",
+					"raw": "http://localhost:9099/v1/menu-items?category=DRINKS",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9091",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-items"
@@ -186,12 +186,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9091/v1/menu-items/1000",
+					"raw": "http://localhost:9099/v1/menu-items/1000",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9091",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-items",
@@ -261,12 +261,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9091/v1/menu-items",
+					"raw": "http://localhost:9099/v1/menu-items",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9091",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-items"
@@ -335,12 +335,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9091/v1/menu-items",
+					"raw": "http://localhost:9099/v1/menu-items",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9091",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-items"
@@ -414,12 +414,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9092/v1/menu-orders",
+					"raw": "http://localhost:9099/v1/menu-orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9092",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-orders"
@@ -451,12 +451,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9092/v1/menu-orders",
+					"raw": "http://localhost:9099/v1/menu-orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9092",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-orders"
@@ -530,12 +530,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9092/v1/menu-orders",
+					"raw": "http://localhost:9099/v1/menu-orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9092",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-orders"
@@ -609,12 +609,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -688,12 +688,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -767,12 +767,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -846,12 +846,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -925,12 +925,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1004,12 +1004,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1083,12 +1083,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1162,12 +1162,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1241,12 +1241,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1278,12 +1278,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1357,12 +1357,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews",
+					"raw": "http://localhost:9099/v1/reviews",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews"
@@ -1377,12 +1377,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews/1",
+					"raw": "http://localhost:9099/v1/reviews/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews",
@@ -1398,12 +1398,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews/menu-item/1?from-0&size=10&sortBy=date_asc",
+					"raw": "http://localhost:9099/v1/reviews/menu-item/1?from-0&size=10&sortBy=date_asc",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews",
@@ -1484,12 +1484,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews/my?from=0&size=10&sortBy=date_asc",
+					"raw": "http://localhost:9099/v1/reviews/my?from=0&size=10&sortBy=date_asc",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews",
@@ -1528,12 +1528,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9093/v1/reviews/ratings",
+					"raw": "http://localhost:9099/v1/reviews/ratings",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9093",
+					"port": "9099",
 					"path": [
 						"v1",
 						"reviews",
@@ -1549,12 +1549,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9094/v1/menu-aggregate/1",
+					"raw": "http://localhost:9099/v1/menu-aggregate/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9094",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-aggregate",
@@ -1570,12 +1570,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9094/v1/menu-aggregate/1000",
+					"raw": "http://localhost:9099/v1/menu-aggregate/1000",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9094",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-aggregate",
@@ -1591,12 +1591,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9094/v1/menu-aggregate?category=DRINKS",
+					"raw": "http://localhost:9099/v1/menu-aggregate?category=DRINKS",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9094",
+					"port": "9099",
 					"path": [
 						"v1",
 						"menu-aggregate"
