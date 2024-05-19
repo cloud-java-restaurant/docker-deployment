@@ -37,6 +37,8 @@ services:
     depends_on:
       config-server:
         condition: service_healthy
+      keycloak:
+        condition: service_started
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
       - SPRING_CLOUD_CONFIG_FAIL_FAST=true
