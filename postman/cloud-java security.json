@@ -13,6 +13,11 @@
 					"type": "oauth2",
 					"oauth2": [
 						{
+							"key": "tokenName",
+							"value": "Auth-Admin",
+							"type": "string"
+						},
+						{
 							"key": "clientSecret",
 							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
 							"type": "string"
@@ -43,13 +48,33 @@
 							"type": "string"
 						},
 						{
-							"key": "tokenName",
-							"value": "Auth",
+							"key": "addTokenTo",
+							"value": "header",
 							"type": "string"
 						},
 						{
-							"key": "addTokenTo",
+							"key": "client_authentication",
 							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
 							"type": "string"
 						}
 					]
@@ -87,6 +112,11 @@
 					"type": "oauth2",
 					"oauth2": [
 						{
+							"key": "tokenName",
+							"value": "Auth",
+							"type": "string"
+						},
+						{
 							"key": "clientSecret",
 							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
 							"type": "string"
@@ -117,13 +147,33 @@
 							"type": "string"
 						},
 						{
-							"key": "tokenName",
-							"value": "Auth",
+							"key": "addTokenTo",
+							"value": "header",
 							"type": "string"
 						},
 						{
-							"key": "addTokenTo",
+							"key": "client_authentication",
 							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
 							"type": "string"
 						}
 					]
@@ -132,7 +182,39 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"One\",\n    \"description\": \"Description\",\n    \"price\": 10.10,\n    \"category\": \"drinks\",\n    \"timeToCook\": 1000,\n    \"weight\": 10.20,\n    \"imageUrl\": \"http://images.com/item.png\",\n    \"ingredientCollection\": {\n        \"ingredients\": [\n            {\n                \"name\": \"ingredient one\",\n                \"calories\": 10\n            },\n            {\n                \"name\": \"ingredient two\",\n                \"calories\": 20\n            }\n        ]\n    }\n}",
+					"raw": "{\n    \"name\": \"Two\",\n    \"description\": \"Description\",\n    \"price\": 10.10,\n    \"category\": \"drinks\",\n    \"timeToCook\": 1000,\n    \"weight\": 10.20,\n    \"imageUrl\": \"http://images.com/item.png\",\n    \"ingredientCollection\": {\n        \"ingredients\": [\n            {\n                \"name\": \"ingredient one\",\n                \"calories\": 10\n            },\n            {\n                \"name\": \"ingredient two\",\n                \"calories\": 20\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu two unauthorized",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Two\",\n    \"description\": \"Description\",\n    \"price\": 10.10,\n    \"category\": \"drinks\",\n    \"timeToCook\": 1000,\n    \"weight\": 10.20,\n    \"imageUrl\": \"http://images.com/item.png\",\n    \"ingredientCollection\": {\n        \"ingredients\": [\n            {\n                \"name\": \"ingredient one\",\n                \"calories\": 10\n            },\n            {\n                \"name\": \"ingredient two\",\n                \"calories\": 20\n            }\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -350,7 +432,470 @@
 			"response": []
 		},
 		{
-			"name": "Submit order for One Two Three",
+			"name": "create menu four",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth Admin",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Four\",\n    \"description\": \"Nice Item Three\",\n    \"price\": 10.10,\n    \"category\": \"drinks\",\n    \"timeToCook\": 1000,\n    \"weight\": 30.20,\n    \"imageUrl\": \"http://images.com/three.png\",\n    \"ingredientCollection\": {\n        \"ingredients\": [\n            {\n                \"name\": \"ingredient one\",\n                \"calories\": 10\n            },\n            {\n                \"name\": \"ingredient two\",\n                \"calories\": 20\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four Copy",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth Admin",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Four Updated\",\n    \"description\": \"Updated Nice Item Three\",\n    \"price\": 100.10,\n    \"timeToCook\": 9999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four forbidden",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth Admin",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Four Updated\",\n    \"description\": \"Updated Nice Item Three\",\n    \"price\": 100.10,\n    \"timeToCook\": 9999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four unauthorized",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Four Updated\",\n    \"description\": \"Updated Nice Item Three\",\n    \"price\": 100.10,\n    \"timeToCook\": 9999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four unauthorized",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four forbidden",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create menu four success",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-items/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-items",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit order for One Two Three user Max",
 			"request": {
 				"auth": {
 					"type": "oauth2",
@@ -398,12 +943,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"nameToQuantity\": {\n        \"One\": 10,\n        \"Two\": 20,\n        \"Three\": 30\n    },\n    \"address\": {\n        \"city\": \"Moscow\",\n        \"street\": \"Street\",\n        \"house\": 1,\n        \"apartment\": 1\n    }\n}",
@@ -413,6 +953,96 @@
 						}
 					}
 				},
+				"url": {
+					"raw": "http://localhost:9099/v1/menu-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"menu-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get orders of Max",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth Max",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:9099/v1/menu-orders",
 					"protocol": "http",
@@ -435,12 +1065,7 @@
 					"type": "noauth"
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"nameToQuantity\": {\n        \"One\": 10,\n        \"Two\": 20,\n        \"Three\": 30\n    },\n    \"address\": {\n        \"city\": \"Moscow\",\n        \"street\": \"Street\",\n        \"house\": 1,\n        \"apartment\": 1\n    }\n}",
@@ -466,7 +1091,7 @@
 			"response": []
 		},
 		{
-			"name": "Submit order for One Two Three Has No Rights",
+			"name": "Submit order for One Two Three forbidden",
 			"request": {
 				"auth": {
 					"type": "oauth2",
@@ -510,16 +1135,36 @@
 							"key": "addTokenTo",
 							"value": "header",
 							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "string"
 						}
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"nameToQuantity\": {\n        \"One\": 10,\n        \"Two\": 20,\n        \"Three\": 30\n    },\n    \"address\": {\n        \"city\": \"Moscow\",\n        \"street\": \"Street\",\n        \"house\": 1,\n        \"apartment\": 1\n    }\n}",
@@ -593,12 +1238,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 5\n}",
@@ -672,12 +1312,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 2,\n    \"comment\": \"Comment\",\n    \"rate\": 5\n}",
@@ -751,12 +1386,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 3,\n    \"comment\": \"Comment\",\n    \"rate\": 5\n}",
@@ -830,12 +1460,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "John"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 5\n}",
@@ -909,12 +1534,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Michael"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 3\n}",
@@ -988,12 +1608,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Max"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 2\n}",
@@ -1067,12 +1682,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Phill"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 1\n}",
@@ -1146,12 +1756,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \" \",\n    \"rate\": 5\n}",
@@ -1225,12 +1830,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 4\n}",
@@ -1262,12 +1862,7 @@
 					"type": "noauth"
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 4\n}",
@@ -1341,12 +1936,7 @@
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-User-Name",
-						"value": "Alex"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"menuId\": 1,\n    \"comment\": \"Comment\",\n    \"rate\": 4\n}",
@@ -1483,6 +2073,149 @@
 						"value": "Alex"
 					}
 				],
+				"url": {
+					"raw": "http://localhost:9099/v1/reviews/my?from=0&size=10&sortBy=date_asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"reviews",
+						"my"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "date_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reviews of Max Unauthorized",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/v1/reviews/my?from=0&size=10&sortBy=date_asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"v1",
+						"reviews",
+						"my"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "date_asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reviews of Admin Forbidden",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "Auth Max",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "z8DEMatUnmNTJkPk1ov8Cc8nXYzpLdaD",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid roles",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cloud-java-gateway",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://keycloak:8080/realms/cloud-java/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9099",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:9099/v1/reviews/my?from=0&size=10&sortBy=date_asc",
 					"protocol": "http",
