@@ -47,7 +47,7 @@ services:
       - REDIS_HOST=${REDIS_HOST}
       - ZIPKIN_URL=${ZIPKIN_URL}
       - KEYCLOAK_URL=${KEYCLOAK_URL}
-      - JWK_SET_URL=${JWK_SET_URL}
+      - KEYCLOAK_CLIENT_SECRET=${KEYCLOAK_CLIENT_SECRET}
 
   dispatcher-service:
     image: "dispatcher-service"
@@ -153,6 +153,8 @@ services:
 #      - DB_URL=${MENU_DB_URL}
 #      - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
 #      - ZIPKIN_URL=${ZIPKIN_URL}
+#      - KEYCLOAK_URL=${KEYCLOAK_URL}
+#      - JWK_SET_URL=${JWK_SET_URL}
 
 
   menu-aggregate-service:
