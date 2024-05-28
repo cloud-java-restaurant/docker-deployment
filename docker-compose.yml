@@ -38,7 +38,7 @@ services:
       config-server:
         condition: service_healthy
       keycloak:
-        condition: service_started
+        condition: service_healthy
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
       - SPRING_CLOUD_CONFIG_FAIL_FAST=true
@@ -294,8 +294,14 @@ services:
       - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
       - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
       - KC_HOSTNAME=keycloak
+      - KC_HEALTH_ENABLED=true
     ports:
       - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/8080;echo -e \"GET /health/ready HTTP/1.1\r\nhost: http://localhost\r\nConnection: close\r\n\r\n\" >&3;grep \"HTTP/1.1 200 OK\" <&3"]
+      interval: 5s
+      timeout: 5s
+      retries: 100
 
 
 volumes:
