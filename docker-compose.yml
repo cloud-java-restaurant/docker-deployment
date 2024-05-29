@@ -48,6 +48,7 @@ services:
       - ZIPKIN_URL=${ZIPKIN_URL}
       - KEYCLOAK_URL=${KEYCLOAK_URL}
       - JWK_SET_URL=${JWK_SET_URL}
+      - LOKI_URL=${LOKI_URL}
 
   dispatcher-service:
     image: "dispatcher-service"
