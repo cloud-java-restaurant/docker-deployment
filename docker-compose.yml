@@ -64,6 +64,7 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - KAFKA_BOOTSTRAP_SERVERS=${KAFKA_BOOTSTRAP_SERVERS}
       - SCHEMA_REGISTRY_URL=${SCHEMA_REGISTRY_URL}
+      - LOKI_URL=${LOKI_URL}
 
   review-service:
     image: "review-service"
@@ -84,6 +85,7 @@ services:
       - DB_URL=${REVIEW_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
+      - LOKI_URL=${LOKI_URL}
 
   orders-service:
     image: "orders-service"
@@ -107,6 +109,7 @@ services:
       - SCHEMA_REGISTRY_URL=${SCHEMA_REGISTRY_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
+      - LOKI_URL=${LOKI_URL}
 
   menu-service:
     image: "menu-service"
@@ -127,6 +130,7 @@ services:
       - DB_URL=${MENU_DB_URL}
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
+      - LOKI_URL=${LOKI_URL}
 
 #  menu-service-2:
 #    image: "menu-service"
@@ -148,6 +152,7 @@ services:
 #      - DB_URL=${MENU_DB_URL}
 #      - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
 #      - ZIPKIN_URL=${ZIPKIN_URL}
+#      - LOKI_URL=${LOKI_URL}
 
 
   menu-aggregate-service:
@@ -164,6 +169,7 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
+      - LOKI_URL=${LOKI_URL}
 
   postgres:
     image: "postgres:16.1"
