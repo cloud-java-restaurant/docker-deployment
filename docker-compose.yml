@@ -324,7 +324,6 @@ services:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_AUTH_DISABLE_LOGIN_FORM=true
     volumes:
-      - ./grafana/storage:/var/lib/grafana
       - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
       - ./grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
 
@@ -337,7 +336,6 @@ services:
       - "9411:9411"   # zipkin
     volumes:
       - ./tempo/tempo.yml:/etc/tempo.yml
-      - ./tempo/tempo:/tmp/tempo
 
   loki:
     image: grafana/loki:main
@@ -345,8 +343,6 @@ services:
     container_name: loki
     ports:
       - "3100:3100"
-    volumes:
-      - ./grafana/loki:/loki
 
 
 volumes:

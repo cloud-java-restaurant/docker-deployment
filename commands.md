@@ -13,3 +13,5 @@ Set alias to keycloak localhost:
 ```shell
 sudo sh -c 'echo "{"registry-mirrors": ["https://mirror.gcr.io"]}" > /etc/docker/daemon.json'
 ```
+
+https://github.com/spring-cloud/spring-cloud-gateway/blob/main/docs/src/main/asciidoc/gateway-grafana-dashboard.json
