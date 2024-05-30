@@ -3,7 +3,7 @@ server:
 
 distributor:
   receivers:
-    zipkin:
+    zipkin: http://tempo:9411/api/v2/spans
 
 storage:
   trace:

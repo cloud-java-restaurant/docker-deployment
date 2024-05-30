@@ -279,11 +279,11 @@ services:
     ports:
       - "6379:6379"
 
-  zipkin:
-    image: "openzipkin/zipkin:3"
-    container_name: "zipkin"
-    ports:
-      - "9411:9411"
+#  zipkin:
+#    image: "openzipkin/zipkin:3"
+#    container_name: "zipkin"
+#    ports:
+#      - "9411:9411"
 
   keycloak:
     image: quay.io/keycloak/keycloak:24.0
