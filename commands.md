@@ -14,4 +14,8 @@ Set alias to keycloak localhost:
 sudo sh -c 'echo "{"registry-mirrors": ["https://mirror.gcr.io"]}" > /etc/docker/daemon.json'
 ```
 
-https://github.com/spring-cloud/spring-cloud-gateway/blob/main/docs/src/main/asciidoc/gateway-grafana-dashboard.json
+# Grafana Dashboards:
+
+- https://github.com/spring-cloud/spring-cloud-gateway/blob/main/docs/src/main/asciidoc/gateway-grafana-dashboard.json
+- https://github.com/resilience4j/resilience4j/blob/master/grafana_dashboard.json
+- https://grafana.com/grafana/dashboards/17175-spring-boot-observability/
