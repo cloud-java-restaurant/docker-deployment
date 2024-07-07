@@ -202,7 +202,7 @@ services:
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       KAFKA_CONFLUENT_SCHEMA_REGISTRY_URL: ${SCHEMA_REGISTRY_URL}
       KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: true
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: false
       CLUSTER_ID: X1oISRwqQ1yqeRlIjsegqQ
     volumes:
       - kafka-data:/var/lib/kafka/data
