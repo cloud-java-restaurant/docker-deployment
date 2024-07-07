@@ -23,7 +23,7 @@
     "topic.creation.default.replication.factor": 1,
     "predicates": "ordersTopic",
     "predicates.ordersTopic.type": "org.apache.kafka.connect.transforms.predicates.TopicNameMatches",
-    "predicates.ordersTopic.pattern": "v1.public.orders*",
+    "predicates.ordersTopic.pattern": "v1.public.orders.*",
     "transforms": "unwrap,PartitionRouting,SetValueSchema",
     "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
     "transforms.unwrap.add.fields": "lsn,source.ts_ms",
