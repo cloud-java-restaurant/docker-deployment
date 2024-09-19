@@ -164,7 +164,7 @@ services:
     image: "postgres:16.1"
     container_name: "postgres"
     ports:
-      - "5432:5432"
+      - "15432:5432"
     environment:
       - POSTGRES_USER=${POSTGRES_DB_USER}
       - POSTGRES_PASSWORD=${POSTGRES_DB_PASSWORD}
