@@ -113,9 +113,8 @@ services:
 #      config-server:
 #        condition: service_healthy
 #    ports:
-#      - "9090:9090"
+#      - "9090:9091"
 #    environment:
-#      - SERVER_PORT=9090
 #      - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
 #      - SPRING_CLOUD_CONFIG_FAIL_FAST=true
 #      - SPRING_PROFILES_ACTIVE=prod
