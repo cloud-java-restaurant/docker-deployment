@@ -6,10 +6,11 @@ services:
     environment:
       - THC_PATH=/actuator/health
       - THC_PORT=9095
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/cloud-java-restaurant/config-repository
     ports:
       - "9095:9095"
     healthcheck:
-      test: [ "CMD", "/cnb/process/health-check" ]
+      test: [ "CMD", "/workspace/health-check" ]
       interval: 15s
       timeout: 5s
       retries: 5
@@ -169,6 +170,7 @@ services:
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
       - LOKI_URL=${LOKI_URL}
+      - SPRING_APPLICATION_NAME=aggregate-service
 
   postgres:
     image: "postgres:16.1"
