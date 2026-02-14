@@ -1,5 +1,5 @@
 [![License](http://img.shields.io/:license-apache%202.0-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Maven Central](https://img.shields.io/maven-central/v/io.debezium/debezium-core?color=bright-green)](https://central.sonatype.com/search?q=io.debezium)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.debezium/debezium-parent/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.debezium%22)
 [![User chat](https://img.shields.io/badge/chat-users-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302529-users)
 [![Developer chat](https://img.shields.io/badge/chat-devs-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302533-dev)
 [![Google Group](https://img.shields.io/:mailing%20list-debezium-brightgreen.svg)](https://groups.google.com/forum/#!forum/debezium)
@@ -53,8 +53,8 @@ Debezium有很多非常有价值的使用场景，我们在这儿仅仅列出几
 使用Debezium代码库并在本地配置它需要以下软件：
 
 * [Git](https://git-scm.com) 2.2.1 or later
-* JDK 21 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
-* [Apache Maven](https://maven.apache.org/index.html) 3.9.8
+* JDK 17 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
+* [Apache Maven](https://maven.apache.org/index.html) 3.8.4
 * [Docker Engine](https://docs.docker.com/engine/install/) or [Docker Desktop](https://docs.docker.com/desktop/) 1.9 or later
 
 有关平台上的安装说明，请参阅上面的链接。您可以通过以下指令查看安装版本
@@ -168,7 +168,7 @@ Postgres connector支持三个用于从数据库服务器捕获流式数据更�
 
 ## 贡献源码(Contributing)
 
-Debezium社区欢迎所有愿意提供帮助的人，无论是报告问题，帮助撰写文档，还是提供代码用于修复错误、添加测试或实现新功能。有关详细信息，请参阅本[文档](CONTRIBUTING.md)。
+Debezium社区欢迎所有愿意提供帮助的人，无论是报告问题，帮助撰写文档，还是提供代码用于修复错误、添加测试或实现新功能。有关详细信息，请参阅本[文档](CONTRIBUTE.md)。
 
 非常感谢所有Debezium贡献者！
 

@@ -1,5 +1,5 @@
 [![License](http://img.shields.io/:license-apache%202.0-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Maven Central](https://img.shields.io/maven-central/v/io.debezium/debezium-core?color=bright-green)](https://central.sonatype.com/search?q=io.debezium)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.debezium/debezium-parent/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.debezium%22)
 [![User chat](https://img.shields.io/badge/chat-users-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302529-users)
 [![Developer chat](https://img.shields.io/badge/chat-devs-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302533-dev)
 [![Google Group](https://img.shields.io/:mailing%20list-debezium-brightgreen.svg)](https://groups.google.com/forum/#!forum/debezium)
@@ -60,9 +60,9 @@ CDC(Change Data Capture)를 사용하면 데이터가 오리지널 데이터베�
 아래의 소프트웨어는 로컬에서 Debezium을 빌드하기 위해 필요합니다.
 
 * [Git](https://git-scm.com) 2.2.1 버전 이상
-* JDK 21 버전 이상, 예) [OpenJDK](http://openjdk.java.net/projects/jdk/)
+* JDK 17 버전 이상, 예) [OpenJDK](http://openjdk.java.net/projects/jdk/)
 * [Docker Engine](https://docs.docker.com/engine/install/) 또는 [Docker Desktop](https://docs.docker.com/desktop/) 1.9 버전 이상
-* [Apache Maven](https://maven.apache.org/index.html) 3.9.8 버전 이상  
+* [Apache Maven](https://maven.apache.org/index.html) 3.8.4 버전 이상  
   (or invoke the wrapper with `./mvnw` for Maven commands)
 
 각 소프트웨어를 설치하기 위해서는 위의 링크의 지침을 확인하세요. 아래의 명령어를 통해 설치되었는지 확인할 수 있습니다.
@@ -177,7 +177,7 @@ RDS 클러스터를 사용하지 않은 상황에 대해 테스트하려면 해�
 
 ## 기여 하기
 
-Debezium 커뮤니티는 문제점 보고, 문서 지원, 버그 수정, 테스트 또는 새로운 기능 구현을 위한 코드 변경등 어떤 방식으로든 도움을 주고 싶어하는 모든 사람을 환영합니다. 자세한 내용은 이 [문서](CONTRIBUTING.md)를 참조하세요.
+Debezium 커뮤니티는 문제점 보고, 문서 지원, 버그 수정, 테스트 또는 새로운 기능 구현을 위한 코드 변경등 어떤 방식으로든 도움을 주고 싶어하는 모든 사람을 환영합니다. 자세한 내용은 이 [문서](CONTRIBUTE.md)를 참조하세요.
  
 모든 Debezium 기여자에게 큰 감사를 드립니다!
 

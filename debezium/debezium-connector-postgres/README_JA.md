@@ -1,5 +1,5 @@
 [![License](http://img.shields.io/:license-apache%202.0-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Maven Central](https://img.shields.io/maven-central/v/io.debezium/debezium-core?color=bright-green)](https://central.sonatype.com/search?q=io.debezium)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.debezium/debezium-parent/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.debezium%22)
 [![User chat](https://img.shields.io/badge/chat-users-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302529-users)
 [![Developer chat](https://img.shields.io/badge/chat-devs-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302533-dev)
 [![Google Group](https://img.shields.io/:mailing%20list-debezium-brightgreen.svg)](https://groups.google.com/forum/#!forum/debezium)
@@ -55,8 +55,8 @@ Debezium が非常に価値あるものとなる状況は多くあります。�
 Debezium のコードベースでを編集・ビルドする為には以下に示すソフトウェアが必要です。
 
 * [Git](https://git-scm.com) 2.2.1 or later
-* JDK 21 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
-* [Apache Maven](https://maven.apache.org/index.html) 3.9.8
+* JDK 11 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
+* [Apache Maven](https://maven.apache.org/index.html) 3.8.4
 * [Docker Engine](https://docs.docker.com/engine/install/) or [Docker Desktop](https://docs.docker.com/desktop/) 1.9 or later
 
 インストール手順については上記のリンクを参照して下さい。インストールされているバージョンを確認する為には以下のコマンドを実行します:
@@ -163,7 +163,7 @@ RDS データベースを設定してテストする方法ついて詳しくは 
 
 ## Contributing
 
-Debezium コミュニティは、問題の報告、文書作成の支援、バグ修正、テストの追加、新機能の実装のためのコード変更の貢献など、全ての形の支援を歓迎します。詳細は [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
+Debezium コミュニティは、問題の報告、文書作成の支援、バグ修正、テストの追加、新機能の実装のためのコード変更の貢献など、全ての形の支援を歓迎します。詳細は [CONTRIBUTE.md](CONTRIBUTE.md) を参照してください。
 
 Debezium の貢献者の皆さんに感謝します。
 

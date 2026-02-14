@@ -1,5 +1,5 @@
 [![License](http://img.shields.io/:license-apache%202.0-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Maven Central](https://img.shields.io/maven-central/v/io.debezium/debezium-core?color=bright-green)](https://central.sonatype.com/search?q=io.debezium)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.debezium/debezium-parent/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.debezium%22)
 [![User chat](https://img.shields.io/badge/chat-users-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302529-users)
 [![Developer chat](https://img.shields.io/badge/chat-devs-brightgreen.svg)](https://debezium.zulipchat.com/#narrow/stream/302533-dev)
 [![Google Group](https://img.shields.io/:mailing%20list-debezium-brightgreen.svg)](https://groups.google.com/forum/#!forum/debezium)
@@ -54,9 +54,9 @@ The [Command Query Responsibility Separation (CQRS)](http://martinfowler.com/bli
 The following software is required to work with the Debezium codebase and build it locally:
 
 * [Git](https://git-scm.com) 2.2.1 or later
-* JDK 21 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
+* JDK 17 or later, e.g. [OpenJDK](http://openjdk.java.net/projects/jdk/)
 * [Docker Engine](https://docs.docker.com/engine/install/) or [Docker Desktop](https://docs.docker.com/desktop/) 1.9 or later
-* [Apache Maven](https://maven.apache.org/index.html) 3.9.8 or later  
+* [Apache Maven](https://maven.apache.org/index.html) 3.8.4 or later  
   (or invoke the wrapper with `./mvnw` for Maven commands)
 
 See the links above for installation instructions on your platform. You can verify the versions are installed and running:
@@ -89,48 +89,6 @@ The Docker Maven Plugin will resolve the docker host by checking the following e
     export DOCKER_TLS_VERIFY=1
 
 These can be set automatically if using Docker Machine or something similar.
-
-#### Colima
-In order to run testcontainers against [colima](https://github.com/abiosoft/colima) the env vars below should be set (assume we use `default` profile of colima)
-
-    colima start
-    export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-    export TESTCONTAINERS_HOST_OVERRIDE="0.0.0.0"
-    export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
-
-#### Docker Desktop on Apple Silicon
-
-When running on Apple Silicon, the Docker Maven Plugin needs to be configured to use the `linux/amd64` platform. Additionally, it should be pointed to the Docker socket created by Docker Desktop using the `docker.host` system property.
-
-For example:
-
-```shell
-mvn docker:start \
-  -Ddocker.host=unix://$HOME/.docker/run/docker.sock \
-  -Ddocker.platform=linux/amd64 \
-  -pl debezium-connector-sqlserver
-```
-
-To avoid repetition in CLI commands, these system properties can be defined in the user's Maven profile.
-Here's an example `~/.m2/settings.xml` profile:
-
-```xml
-<settings>
-  <profiles>
-    <profile>
-      <id>default</id>
-      <properties>
-        <docker.host>unix://${user.home}/.docker/run/docker.sock</docker.host>
-        <docker.platform>linux/amd64</docker.platform>
-      </properties>
-    </profile>
-  </profiles>
-
-  <activeProfiles>
-    <activeProfile>default</activeProfile>
-  </activeProfiles>
-</settings>
-```
 
 ### Building the code
 
@@ -217,7 +175,7 @@ The relevant portion of the line will look similar to the following:
 
 ## Contributing
 
-The Debezium community welcomes anyone that wants to help out in any way, whether that includes reporting problems, helping with documentation, or contributing code changes to fix bugs, add tests, or implement new features. See [this document](CONTRIBUTING.md) for details.
+The Debezium community welcomes anyone that wants to help out in any way, whether that includes reporting problems, helping with documentation, or contributing code changes to fix bugs, add tests, or implement new features. See [this document](CONTRIBUTE.md) for details.
 
 A big thank you to all the Debezium contributors!
 
