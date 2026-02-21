@@ -6,6 +6,7 @@ services:
       - THC_PATH=/actuator/health
       - THC_PORT=9095
       - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/cloud-java-restaurant/config-repository
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
     ports:
       - "9095:9095"
     healthcheck:
@@ -28,6 +29,7 @@ services:
       - SPRING_CLOUD_CONFIG_FAIL_FAST=true
       - SPRING_PROFILES_ACTIVE=prod
       - EUREKA_HOSTNAME=discovery-service
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
   gateway-service:
     image: "gateway-service"
@@ -42,7 +44,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -54,6 +56,8 @@ services:
       - KEYCLOAK_URL=${KEYCLOAK_URL}
       - JWK_SET_URL=${JWK_SET_URL}
       - LOKI_URL=${LOKI_URL}
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
+      - SPRING_CLOUD_CIRCUITBREAKER_BULKHEAD_RESILIENCE4J_ENABLED=false
 
   dispatcher-service:
     image: "dispatcher-service"
@@ -66,7 +70,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -75,6 +79,7 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=${KAFKA_BOOTSTRAP_SERVERS}
       - SCHEMA_REGISTRY_URL=${SCHEMA_REGISTRY_URL}
       - LOKI_URL=${LOKI_URL}
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
   review-service:
     image: "review-service"
@@ -89,7 +94,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -101,6 +106,7 @@ services:
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
       - LOKI_URL=${LOKI_URL}
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
   orders-service:
     image: "orders-service"
@@ -115,7 +121,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -129,6 +135,7 @@ services:
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
       - LOKI_URL=${LOKI_URL}
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
   menu-service:
     image: "menu-service"
@@ -143,7 +150,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -155,6 +162,7 @@ services:
       - DISCOVERY_SERVICE_URL=${DISCOVERY_SERVICE_URL}
       - ZIPKIN_URL=${ZIPKIN_URL}
       - LOKI_URL=${LOKI_URL}
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
 #  menu-service-2:
 #    image: "menu-service"
@@ -189,7 +197,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.5'
+          cpus: '2'
           memory: 2G
     environment:
       - CONFIGSERVER_IMPORT=configserver:${CONFIG_SERVER_URL}
@@ -199,6 +207,7 @@ services:
       - ZIPKIN_URL=${ZIPKIN_URL}
       - LOKI_URL=${LOKI_URL}
       - SPRING_APPLICATION_NAME=aggregate-service
+      - JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75
 
   postgres:
     image: "postgres:16.1"
